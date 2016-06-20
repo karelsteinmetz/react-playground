@@ -1,14 +1,19 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
         "jsx": "react",
-        "sourceMap": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "outDir": "dist"
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "outDir": "./build/",
+        "preserveConstEnums": true,
+        "removeComments": true,
+        "target": "ES5"
     },
+    "filesGlob": [
+        "./src/**/*"
+    ],
     "files": [
-        "./typings/tsd.d.ts"
+        "./typings/tsd.d.ts",
+        "./src/app.tsx",
+        "./src/greeter.tsx"
     ]
 }
