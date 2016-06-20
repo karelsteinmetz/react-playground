@@ -27,7 +27,7 @@ const CategorySidebar = ({ params }) => {
       <ul>
         {Object.keys(category.items).map((item: string, index: number) => (
           <li key={index}>
-            <rr.Link to={`/category/${category.name}/${category.items[item].name}`}>{category.items[item].name}</rr.Link>
+            <rr.Link to={`/category/${params.category}/${item}`}>{category.items[item].name}</rr.Link>
           </li>
         )) }
       </ul>
@@ -60,7 +60,7 @@ const IndexSidebar = () => (
     <ul>
       {Object.keys(data.data).map((categoryId, index) => (
         <li key={index}>
-          <rr.Link to={`/category/${data.data[categoryId].name}`}>{data.data[categoryId].name}</rr.Link>
+          <rr.Link to={`/category/${categoryId}`}>{data.data[categoryId].name}</rr.Link>
         </li>
       )) }
     </ul>
